@@ -24,40 +24,42 @@ body {
 }
 
 .logo {
-    margin-bottom: 20vmin;
+    margin-bottom: 10vh;
     text-align: center;
-    width: 18vmin;
+    width: 18vh;
 }
-
 
 .black-friday-text {
     font-family: 'Sugo Pro';
-    font-size: 120px;
-    line-height: 0.9;
+    font-size: clamp(2.5rem, 17vw, 7.5rem);
+    line-height: 0.8;
     text-align: center;
     margin-bottom: 3vmin;
-    letter-spacing: -2px;
+    letter-spacing: -0.02em;
+    padding: 0 5vw;
 }
 
 .date-text {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 3.5vw, 1.5rem);
     font-weight: 600;
     text-align: center;
     margin-bottom: 7vmin;
+    padding: 0 5vw;
 }
 
 .loading-container {
-    width: 45vmax;
-    margin-bottom: 20px;
+    width: clamp(18rem, 65vw, 90vw);
+    margin-bottom: clamp(0.5rem, 2vmin, 2rem);
+    padding: 0 clamp(1rem, 3vw, 3rem);
 }
 
 .progress-bar {
     width: 100%;
-    height: 6vmin;
+    height: clamp(2.5rem, 6.5vmin, 5rem);
     background: transparent;
-    border: 0.4vmin solid white;
-    border-radius: 2vmin;
-    padding: 0.8vmin;
+    border: clamp(0.25rem, 0.4vmin, 0.3rem) solid white;
+    border-radius: clamp(1rem, 2.5vmin, 2rem);
+    padding: clamp(0.25rem, 1vmin, 0.75rem);
     position: relative;
     overflow: hidden;
 }
@@ -65,31 +67,38 @@ body {
 .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, #4da3ff 0%, #7b5cff 100%);
-    border-radius: 1vmin;
+    border-radius: clamp(0.5rem, 1.1vmin, 1.25rem);
     width: 0%;
     transition: width 1s ease-out;
 }
 
 .loading-text {
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
-    margin-top: 15px;
+    margin-top: 1.5vmin;
     margin-bottom: 15vmin;
+    padding: 0 5vw;
 }
 
 .cursor-icon {
     position: fixed;
     top: 45%;
     right: 15%;
-    width: 200px;
-    height: 200px;
+    width: clamp(4rem, 20vmin, 12.5rem);
+    height: clamp(4rem, 20vmin, 12.5rem);
     pointer-events: none;
     z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .cursor-icon {
+        display: none;
+    }
 }
 
 .cursor-icon svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(0.125rem 0.125rem 0.25rem rgba(0,0,0,0.5));
 }
